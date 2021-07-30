@@ -9,8 +9,8 @@ async function main() {
         await octokit.rest.issues.createComment({
             owner: github.context.owner,
             repo: github.context.repo,
-            github.context.payload.number,
-            "boop",
+            issue_number: github.context.payload.number,
+            body: "boop",
         }); 
 
         const payload = JSON.stringify(github.context, undefined, 2)
