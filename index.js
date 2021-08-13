@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 async function main() {
     try {
-        console.log(JSON.stringify(github.context));
+        //console.log(JSON.stringify(github.context));
         
         
         const myToken = core.getInput('ghToken');
@@ -30,8 +30,8 @@ async function main() {
         });
         console.log(res);
 
-        const payload = JSON.stringify(github.context, undefined, 2)
-        console.log(`The event payload: ${payload}`);
+        //const payload = JSON.stringify(github.context, undefined, 2)
+        //console.log(`The event payload: ${payload}`);
     } catch (error) {
         core.setFailed(error.message);
     }
