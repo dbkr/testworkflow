@@ -3,6 +3,7 @@ const github = require('@actions/github');
 
 async function main() {
     try {
+        core.setFailed('insufficient llamas');
         const myToken = core.getInput('ghToken');
         const octokit = github.getOctokit(myToken);
 
