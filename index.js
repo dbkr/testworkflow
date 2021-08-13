@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 async function main() {
     try {
-        github.getOctokit(core.getInput('ghToken')).checks.create({
+        github.getOctokit(core.getInput('ghToken')).rest.checks.create({
             ...github.context.repo,
             head_sha: context.pull_request.head.sha,
             name: "testy / TestJob",
