@@ -5,7 +5,7 @@ async function main() {
     try {
         github.getOctokit(core.getInput('ghToken')).rest.checks.create({
             ...github.context.repo,
-            head_sha: context.pull_request.head.sha,
+            head_sha: github.context.pull_request.head.sha,
             name: "testy / TestJob",
             status: "completed",
             conclusion: "action_required",
