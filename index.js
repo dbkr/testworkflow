@@ -19,14 +19,14 @@ async function main() {
             ...github.context.repo,
             head_sha: github.context.payload.pull_request.head.sha,
             name: "name of the check",
-            status: "completed",
-            conclusion: "action_required",
-            details_url: "https://www.google.com/",
-            output: {
-                title: "the title",
-                summary: "summery",
-                text: "the text",
-            },
+            //status: "completed",
+            //conclusion: "action_required",
+            //details_url: "https://www.google.com/",
+            //output: {
+            //    title: "the title",
+            //    summary: "summery",
+            //    text: "the text",
+            //},
         });
         console.log(res);
 
