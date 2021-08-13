@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 async function main() {
     try {
-        console.log(JSON.stringify(github.context);
+        console.log(JSON.stringify(github.context));
         github.getOctokit(core.getInput('ghToken')).rest.checks.create({
             ...github.context.repo,
             head_sha: github.context.pull_request.head.sha,
